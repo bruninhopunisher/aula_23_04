@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Exemplo para tela de login DIMDIM</h1>
+    <form id="FormularioLogin">
+        <label for="usuario">Usuário: </label>
+        <input type="text" id="usuario" name="Usuario">
+        <label for="senha">Senha: </label>
+        <input type="password" id="senha" name="senha">
+        <button type="button" onclick="efeuarlogin();">Enviar </button>
+        <button type="button" onclick="limparCampos();">Limpar Campos</button>
+    </form>
+
+    <script>
+        function efeuarlogin() {
+            let usuario = document.getElementById('usuario').value;
+            let senha = document.getElementById('senha').value;
+            if(usuario =='senac' && senha =='230424') {
+                window.location.href = 'http://www.google.com.br';
+            } else {
+                alert("usuário e senhas incorretos");
+            }
+        }
+
+        function limparCampos() {
+            usuario = '';
+            senha = '';
+            document.getElementsById('usuario').focus();
+        }
+    </script>
+</body>
+
+</html>
